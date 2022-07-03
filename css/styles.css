@@ -105,13 +105,19 @@ section {
 }
 .main-nav,
 .contact {
-    color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
     word-spacing: inherit;
     text-decoration: none;
+    
+}
+.main-nav-li {
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact {
     display: flex;
@@ -128,6 +134,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tell-icon {
     margin-right: 10px;
@@ -351,6 +360,9 @@ section {
 	height: 44px;
 	border-radius: 50%;
 	fill: var(--color-icon);
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc a:hover,
 .soc a:focus {
@@ -384,6 +396,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-property: border-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-li .item:last-child {
     margin-right: 0;
@@ -392,7 +407,7 @@ section {
     margin-left: 30px;
 }
 .client-li a {
-    fill: var(--primery-text-color);
+    fill: #AFB1B8;
 }
 .client-svg:hover,
 .client-svg:focus {
@@ -484,6 +499,9 @@ footer {
 	border-radius: 50%;
 	fill: var(--primery-backgrouncol-port);
 	background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .network a:hover,
 .network a:focus {
@@ -530,19 +548,22 @@ footer {
     margin-left: 8px;
 }
 .main-btn {
-padding: 6px 22px;
-font-family: Roboto, sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-text-align: center;
-letter-spacing: 0.03em;
-color: #000;
-background-color: var(--secondary-beckgrouncol-port);
-border-color: transparent;
-border-radius: 4px;
-cursor: pointer;
+    padding: 6px 22px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #000;
+    background-color: var(--secondary-beckgrouncol-port);
+    border-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-property: color, background-color, box-shadow, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .main-btn:focus,
@@ -559,9 +580,15 @@ cursor: pointer;
     gap: 30px;
     list-style: none;
 }
+.works-li .item {
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .works-li .item > a {
     color: inherit;
     text-decoration: none;
+    
 }
 .works-li > li {
     min-width: 370px;
