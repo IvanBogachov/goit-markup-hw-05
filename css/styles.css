@@ -303,6 +303,9 @@ section {
     margin-bottom: 50px;
     text-align: center;
 }
+.les-li .item {
+    position: relative;
+}
 .les-li {
     display: flex;
 }
@@ -311,6 +314,26 @@ section {
 }
 .les-li .item + .item {
     margin-left: 30px;
+}
+.les-action > h3 {
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin: auto;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.les-action {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
 }
 /* command */
 .command {
