@@ -100,6 +100,7 @@ section {
     margin-left: 50px;
 }
 .main-nav .item {
+    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -112,12 +113,26 @@ section {
     color: var(--secondary-text-color);
     word-spacing: inherit;
     text-decoration: none;
-    
 }
 .main-nav-li {
     transition-property: color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-nav-li::after {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content:'';
+    width: 100%;
+    height: 4px;
+    background: var(--highlight-color);
+    border-radius: 2px;
+    display: none;
+}
+.current::after {
+    display: block;
 }
 .contact {
     display: flex;
