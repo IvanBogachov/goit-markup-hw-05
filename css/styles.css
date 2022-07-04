@@ -48,6 +48,9 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+button {
+    text-transform: none;
+}
 section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -221,6 +224,34 @@ section {
     border-radius: 4px;
     cursor: pointer;
 }
+.button-close {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    min-width: 30px;
+    border-radius: 50%;
+    background-color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    transition-property: border, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon {
+    display: block;
+    fill: currentColor;
+}
+.button-close:hover {
+    border: 1px solid var(--highlight-color);
+    color: var(--highlight-color);
+}
 .backdrop {
     position: fixed;
     top: 0;
@@ -242,7 +273,6 @@ section {
     background: var(--primery-backgrouncol-port);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
     
     transform: translate(-50%, -50%);
 }
