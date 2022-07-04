@@ -248,7 +248,8 @@ section {
     display: block;
     fill: currentColor;
 }
-.button-close:hover {
+.button-close:hover,
+.button-close:focus {
     border: 1px solid var(--highlight-color);
     color: var(--highlight-color);
 }
@@ -365,9 +366,6 @@ section {
 }
 .les-action > h3 {
     display: flex;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     margin: auto;
