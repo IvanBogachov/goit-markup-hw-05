@@ -355,6 +355,7 @@ section {
 }
 .les-li {
     display: flex;
+    justify-content: space-between;
 }
 .les-li .item:last-child {
     margin-right: 0;
