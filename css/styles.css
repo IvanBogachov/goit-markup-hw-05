@@ -223,6 +223,12 @@ section {
     border-radius: 4px;
     cursor: pointer;
 }
+
+
+
+
+
+
 .button-close {
     display: flex;
     position: absolute;
@@ -243,39 +249,11 @@ section {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-icon {
-    display: block;
-    fill: currentColor;
-}
-.button-close:hover,
-.button-close:focus {
-    border: 1px solid var(--highlight-color);
-    color: var(--highlight-color);
-}
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 528px;
-    min-height: 581px;
-    background: var(--primery-backgrouncol-port);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    
-    transform: translate(-50%, -50%);
-}
+
+
+
+
+
 /* peculiarities */
 .pecul {
     padding-bottom: 0;
@@ -443,7 +421,8 @@ section {
 	height: 44px;
 	border-radius: 50%;
 	fill: var(--color-icon);
-    transition-property: color, fill;
+    background-color: transparent;
+    transition-property: fill, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -479,6 +458,7 @@ section {
     border-radius: 4px;
     width: 170px;
     height: 92px;
+    fill: #AFB1B8;
     transition-property: border-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -489,9 +469,7 @@ section {
 .client-li .item + .item {
     margin-left: 30px;
 }
-.client-li a {
-    fill: #AFB1B8;
-}
+
 .client-svg:hover,
 .client-svg:focus {
     border-color: var(--highlight-color);
@@ -728,3 +706,91 @@ footer {
     letter-spacing: 0.06em;
     color: #212121;
 }
+
+
+/* Modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    visibility: visible;
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    background: var(--primery-backgrouncol-port);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+}
+.button-close {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    min-width: 30px;
+    border-radius: 50%;
+    background-color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    transition-property: border, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon {
+    display: block;
+    fill: currentColor;
+}
+.button-close:hover,
+.button-close:focus {
+    border: 1px solid var(--highlight-color);
+    color: var(--highlight-color);
+}
+
+
+.backdrop.is-hidden .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+  .backdrop .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  
+    background-color: var(--primery-backgrouncol-port);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
