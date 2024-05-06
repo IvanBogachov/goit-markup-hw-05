@@ -512,13 +512,16 @@ main {
 }
 
 .sub-input {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
     border: 1px solid #ffffff;
     border-radius: 4px;
     width: 264px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background-color: #2e2f42;
-    padding: 18px;
+    background-color: transparent;
+    padding-left: 16px;
     color: #ffffff;
 }
 
