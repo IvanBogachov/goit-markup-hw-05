@@ -748,7 +748,6 @@ main {
 }
 
 .checkbox:checked+.pol-label .pol-checkbox {
-    border: 1px solid #404bbf;
     background-color: #404bbf;
     fill: #f4f4fd;
     border: none;
