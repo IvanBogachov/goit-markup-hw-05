@@ -681,10 +681,10 @@ main {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    display: flex;
+    /* display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    align-items: center;
+    align-items: center; */
 }
 .pol-checkbox {
     width: 16px;
