@@ -346,36 +346,42 @@
             <p class="group-title">Leave your contacts and we will call you back</p>
             <form class="form-modal" name="issue_report_form" autocomplete="off">
                 <div class="form-group">
-                    <label  class="form-label" for="user-name">Name</label>
+                    <label class="form-label" for="user-name">Name</label>
                     <div class="form-wrap">
                         <input class="form-input" type="text" id="user-name" name="user-name" required>
                         <svg class="form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-person"></use>
                         </svg>
                     </div>
-                    <label  class="form-label" for="contact_tel">Phone</label>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="user-tel">Phone</label>
                     <div class="form-wrap">
-                        <input class="form-input" type="tel" id="contact_tel" name="contact_tel" required>
+                        <input class="form-input" type="tel" id="user-tel" name="user-tel" required>
                         <svg class="form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>
                     </div>
-                    <label  class="form-label" for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="user-email">Email</label>
                     <div class="form-wrap">
-                        <input class="form-input" type="email" id="email" name="email" required>
+                        <input class="form-input" type="email" id="user-email" name="user-email" required>
                         <svg class="form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-mail"></use>
                         </svg>
                     </div>
-                    <label class="form-label textarea" for="descript">
-                        Comment
-                        <textarea class="textarea-input" id="descript" name="descript" placeholder="Text input"></textarea>
-                    </label>
                 </div>
-                <div class="polici">
-                    <input class="checkbox visually-hidden" id="priv-polici" type="checkbox" name="polici" value="true"
+                <div class="form-group">
+                    <label class="form-label textarea" for="user-comment">Comment</label>
+                    <textarea class="textarea-input" id="user-comment" name="user-comment"
+                            placeholder="Text input"></textarea>    
+                </div>
+                
+                    <div class="polici">
+                    <input class="checkbox visually-hidden" id="user-privacy" type="checkbox" name="user-privacy" value="true"
                         required>
-                    <label class="pol-label" for="priv-polici">
+                    <label class="pol-label" for="user-privacy">
                         <span class="pol-checkbox">
                             <svg class="icon-checked" width="10" height="8">
                                 <use href="./images/icons.svg#icon-chek"></use>
